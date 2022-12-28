@@ -1,0 +1,10 @@
+# first question
+
+def my_func(str,n):
+    x = list(str)
+    for i in range(n-len(str)):
+        str = str + x[i%len(str)]
+        a_count = str.count('a')
+    return str, a_count
+
+print(my_func('abcac',10))

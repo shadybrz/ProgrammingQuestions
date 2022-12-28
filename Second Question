@@ -1,0 +1,20 @@
+#Second Question
+
+def my_func(st):
+    x = list(st)
+    n = len(x)
+    y = set()
+    remove = False
+    for i in range(n-1):
+        for j in range(0, n-i-1):
+            if x[j] == x[j+1]:
+                remove = True
+                y.add(j+1)
+        if not remove:
+            return
+
+    new_list = [x[i] for i in range(len(x)) if i not in y]
+    new_st = ''.join(new_list)
+    return new_st, len(y)
+    
+print(my_func('AAAA'))
